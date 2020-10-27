@@ -1,0 +1,111 @@
+#include <stdio.h>
+
+int main()
+
+{
+
+	int A[10],ele,i,top=-1,ch;	do
+
+	{
+
+		printf("Enter your choice\n");
+
+		printf("Press 1 for insertion\nPress 2 for deletion\nPress 3 for display\nPress 4 gor quit\n");
+
+		scanf("%d",&ch);
+
+		if(ch==1)  //insertion
+
+		{
+
+			if(top==9)
+
+			{
+
+				printf("Insertion is not possible\n");
+
+			}
+
+			else
+
+			{
+
+				top++;
+
+				printf("Enter the element\n");
+
+				scanf("%d",&ele);
+
+				A[top]=ele;
+
+			}
+
+		}
+
+		else if(ch==2)  //deletion
+
+		{
+
+			if(top==-1)
+
+			{
+
+				printf("Deletion is not possible\n");
+
+			}
+
+			else
+
+			{
+
+				printf("%d is deleted\n",A[top]);
+
+				top--;
+
+			}
+
+		}
+
+		else if(ch==3)  //display
+
+		{
+
+			if(top==-1)
+
+			{
+
+				printf("No element in stack\n");
+
+			}
+
+			else
+
+			{
+
+				for(i=top;i>=0;i--)
+
+				{
+
+					printf("%d\t",A[i]);
+
+				}
+
+				printf("\n");
+
+			}
+
+		}
+
+		else //quit
+
+		{
+
+			exit (0);
+
+		}
+
+	}while(ch!=4);
+
+	return 0;
+
+}
